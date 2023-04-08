@@ -1,12 +1,66 @@
-The Codelogic.Core framework is a C# .NET 6 library that provides a set of tools and utilities for developing .NET applications. It includes several core features that can be used by other libraries and applications, including:
+Codelogic
+Codelogic is a .NET 6 framework for developing applications that includes a set of common functionality that can be reused across different projects.
 
-A logging system that can be used to log messages to multiple destinations, such as the console or a file.
-A configuration system that can be used to manage application configuration data using JSON files.
-Common utility functions for working with strings, encryption, and other common tasks.
-In addition to these core features, the Codelogic.Core library also includes an extension system that allows developers to add additional functionality to their applications. The extension system is designed to be flexible and extensible, allowing developers to define their own extensions and add them to their applications as needed.
+Folder Structure
+The Codelogic framework follows a recommended folder structure to make it easy to organize and find your files. The recommended folder structure is as follows:
 
-Each extension is implemented as a separate .NET assembly that can be loaded dynamically at runtime. Extensions can define their own configuration data and logging providers, which are integrated with the Codelogic.Core logging and configuration systems.
+css
+Copy code
+Codelogic/
+├── src/
+│   ├── Codelogic/
+│   │   ├── Codelogic.csproj
+│   │   ├── Configuration/
+│   │   │   ├── ConfigurationManager.cs
+│   │   │   └── ...
+│   │   ├── Extensions/
+│   │   │   ├── ExtensionManager.cs
+│   │   │   └── ...
+│   │   ├── Logging/
+│   │   │   ├── Logger.cs
+│   │   │   └── ...
+│   │   ├── Utils/
+│   │   │   ├── Encryption/
+│   │   │   │   ├── AesEncryption.cs
+│   │   │   │   └── ...
+│   │   │   ├── FileHandling/
+│   │   │   │   ├── FileUtils.cs
+│   │   │   │   └── ...
+│   │   │   ├── Networking/
+│   │   │   │   ├── HttpUtils.cs
+│   │   │   │   └── ...
+│   │   │   ├── Serialization/
+│   │   │   │   ├── JsonSerializer.cs
+│   │   │   │   └── ...
+│   │   │   ├── StringUtils/
+│   │   │   │   ├── StringUtils.cs
+│   │   │   │   ├── StringValidator.cs
+│   │   │   │   └── ...
+│   │   │   └── ...
+│   │   └── ...
+│   └── Codelogic.SampleExtension/
+│       ├── Codelogic.SampleExtension.csproj
+│       ├── Models/
+│       │   ├── SampleConfig.cs
+│       │   └── ...
+│       ├── SampleExtension/
+│       │   ├── SampleExtension.cs
+│       │   └── ...
+│       └── ...
+└── ...
+This folder structure includes separate subfolders for different types of functionality, such as configuration, extensions, logging, and utilities. Within each subfolder, you can organize your files as needed.
 
-To use the Codelogic.Core library in an application, developers simply need to include a reference to the library in their project and start using the provided functionality. They can also create their own extensions and add them to their application by including the extension assemblies in the application's extensions folder. The Codelogic.Core library will automatically detect and load the extensions at runtime.
+Functionality
+The Codelogic framework includes the following functionality:
 
-Overall, the Codelogic.Core library provides a flexible, extensible framework for developing .NET applications with logging, configuration, and other utility functionality. It is designed to be easy to use and customize, making it a valuable tool for developers of all levels of experience.
+Configuration
+The ConfigurationManager class provides a simple and consistent way to read and write configuration files for both Codelogic extensions and applications that use the framework. Configuration files are stored in the Storage/Configs directory in JSON format, with the file name being the name of the extension. The ConfigurationManager also provides the ability to initialize default configuration values on application startup.
+
+Extensions
+The ExtensionManager class provides a way to manage Codelogic extensions. Extensions are loaded as separate DLL files in the Extensions directory, and the ExtensionManager provides a way to load and unload extensions, as well as access their functionality.
+
+Logging
+The Logger class provides a simple way to log messages to files. Log files are stored in the Storage/Logs directory, with separate log files for each extension and a main Codelogic.log file that contains all log messages.
+
+Utilities
+The Utils folder contains various utility classes for common tasks such as file handling, networking,
