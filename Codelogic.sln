@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{815C97F8-4649-4624-B8D8-43650E005D70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codelogic", "src\Codelogic\Codelogic.csproj", "{2072FC88-817D-4CC8-8D7D-18A8BC54ED2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codelogic.SampleExtension", "src\Codelogic.SampleExtension\Codelogic.SampleExtension.csproj", "{367609A8-C3D4-4504-BBAA-6E88F780746B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2072FC88-817D-4CC8-8D7D-18A8BC54ED2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2072FC88-817D-4CC8-8D7D-18A8BC54ED2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2072FC88-817D-4CC8-8D7D-18A8BC54ED2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2072FC88-817D-4CC8-8D7D-18A8BC54ED2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{367609A8-C3D4-4504-BBAA-6E88F780746B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{367609A8-C3D4-4504-BBAA-6E88F780746B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{367609A8-C3D4-4504-BBAA-6E88F780746B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{367609A8-C3D4-4504-BBAA-6E88F780746B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2072FC88-817D-4CC8-8D7D-18A8BC54ED2C} = {815C97F8-4649-4624-B8D8-43650E005D70}
+		{367609A8-C3D4-4504-BBAA-6E88F780746B} = {815C97F8-4649-4624-B8D8-43650E005D70}
+	EndGlobalSection
+EndGlobal
